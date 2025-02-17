@@ -1,0 +1,69 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore API</title>
+    <link rel="stylesheet" href="./css\style.css">
+</head>
+<body>
+    <header>
+        <img src="https://th.bing.com/th/id/OIP.nV51_atJWfnPjPzaPlgzkwHaF2?rs=1&pid=ImgDetMain" alt="bookLogo" id="logo">
+        <h1 id="Heading">Bookstore</h1>
+    </header>
+    <div >
+        
+        <main class="container">
+            <div class="home">
+                <section>
+                      <button class='home-btns' id="show-btn" onclick="getBooks()">Show All Books</button>
+                      <button class='home-btns' id="create-btn" onclick="bookForm()">Create Book</button>
+                      <!-- <button type="submit" class='home-btns' id="update-btn">Delete</button> -->
+               </section>
+            </div>
+            <div >
+                <section id="displayData">
+                        <table>
+                            <thead>
+                                <tr id="tableHeaders">
+                                    <td id="table-indexCol">S.No</td>
+                                    <td id="table-col">Book Name</td>
+                                    <td id="table-col">Book Author</td>
+                                    <td id="table-col">Book Price</td>
+                                    <td id="table-col">Operation</td>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody"></tbody>
+                        </table>
+                </section>
+            </div>
+            <div id="addBookDiv">
+            <section id="add-book" class="addBookForm">
+                <h2>Add a New Book</h2>
+                <form id="addBookForm">
+                    <input type="text" id="title" placeholder="Title" required>
+                    <input type="text" id="author" placeholder="Author" required>
+                    <input type="number" id="price" placeholder="Price" required>
+                    <button type="submit">Add Book</button>
+                </form>
+            </section>
+        </div>
+            <section id="edit-book" class="editBookForm">
+                <h2>Edit Book</h2>
+                <form id="editBookForm">
+                    <input type="text" id="updateTitle" placeholder="Title" required>
+                    <input type="text" id="updateAuthor" placeholder="Author" required>
+                    <input type="number" id="updatePrice" placeholder="Price" required>
+                    <button type="submit" onclick="updateBook()">Update</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>Bookstore by Sadiq Mohammad</p>
+    </footer>
+
+    <script src="./js\script.js"></script>
+
+</body>
+</html>

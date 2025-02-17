@@ -1,0 +1,179 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    
+}
+
+header {
+    
+    display: flex;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+}
+#Heading{
+    width:100vw;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+#logo{
+    width:100px;
+    border-radius: 30px;
+    height:fit-content;
+}
+.container {
+    background-color:beige;
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+.home{
+    width: 300px;
+    height: auto;
+    background-color: #4CAF50;
+}
+.home-btns{
+    cursor: pointer;
+    display:flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+/* main {
+    max-width:100%;
+    /* margin: 5px; */
+    /* padding: 5px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */ */
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 1em; 
+}
+
+#book-list ul {
+    list-style-type: none;
+}
+
+#book-list ul li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+#table-col{
+    font-size: 20px;
+    font-weight: bold;
+    width: 200px;
+}
+#table-indexCol{
+    font-size: 20px;
+    font-weight: bold;
+    width: 80px;
+}
+#tableHeaders{
+    background-color: rgb(65, 132, 132);
+}
+#tableBody{
+    background-color:bisque;
+}
+#edit-btn{
+    cursor: pointer;
+    background-color: blue;
+    width: 60px;
+}
+#dlt-btn{
+    cursor: pointer;
+    background-color: red;
+    width:60px;
+}
+.addBookForm{
+    background-color:bisque;
+    padding: 20px;
+}
+.addBookForm form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.addBookForm input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.addBookForm button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.editBookForm{
+    background-color:bisque;
+    padding: 20px;
+}
+.editBookForm form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.editBookForm input {
+    width: 300px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.editBookForm button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addBookForm button:hover {
+    background-color: #45a049;
+}
+/* #addBookDiv{
+    width:400px;
+    background-color: antiquewhite;
+} */
+
+footer {
+    text-align: center;
+    /* margin-top: 20px; */
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
