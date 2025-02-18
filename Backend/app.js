@@ -11,7 +11,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/BookStore", 
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://sadiqmohd5892:Sadiq123@cluster0.tyxac.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", 
   { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log('Error: Failed to connect MongoDB', err));
