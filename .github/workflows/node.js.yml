@@ -30,21 +30,41 @@
 #     - run: npm run build --if-present
 #     - run: npm test
 
-name: Docker CI/CD
+name: Node.js CI/CD with Docker
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
-  build-and-push:
+  build-and-deploy:
+
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install backend dependencies
+      run: npm install
+      working-directory: capstone-project-main/Backend
+
+    - name: Lint and test backend
+      run: |
+        npm install eslint
+        npx eslint .
+      working-directory: capstone-project-main/Backend
+
+    - name: Build frontend (no build step required)
+      run: echo "No frontend build step defined"
+      working-directory: capstone-project-main/Frontend
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
@@ -55,11 +75,11 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Build and push Docker image
+    - name: Build and Push Docker image
       uses: docker/build-push-action@v5
       with:
-        context: ./capstone-app
-        file: ./capstone-app/Dockerfile
+        context: ./capstone-project-main
+        file: ./capstone-project-main/Dockerfile
         push: true
         tags: sadiqmohd589/capstone-app:latest
 
