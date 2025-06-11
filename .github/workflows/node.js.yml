@@ -75,11 +75,11 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Build and Push Docker image
+    - name: Build and push Docker image
       uses: docker/build-push-action@v5
       with:
-        context: ./Backend
-        file: ./Backend/Dockerfile
+        context: ./capstone-project-main
+        file: .Dockerfile
         push: true
         tags: sadiqmohd589/capstone-app:latest
 
