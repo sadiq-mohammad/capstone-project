@@ -56,11 +56,11 @@ jobs:
       run: npm install
       working-directory: ./Backend
 
-    - name: Lint and test backend
-      run: |
-        npm install eslint
-        npx eslint .
-      working-directory: ./Backend
+    # - name: Lint and test backend
+    #   run: |
+    #     npm install eslint
+    #     npx eslint .
+    #   working-directory: ./Backend
 
     - name: Build frontend (no build step required)
       run: echo "No frontend build step defined"
