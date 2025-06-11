@@ -78,7 +78,7 @@ jobs:
     - name: Build and Push Docker image
       uses: docker/build-push-action@v5
       with:
-        context: .
+        context: ./Backend
         file: ./Backend/Dockerfile
         push: true
         tags: sadiqmohd589/capstone-app:latest
